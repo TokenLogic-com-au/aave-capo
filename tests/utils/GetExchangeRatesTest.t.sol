@@ -36,7 +36,7 @@ import {CapAdaptersCodeScroll} from '../../scripts/DeployScroll.s.sol';
 
 contract ExchangeRatesEth is Test {
   function setUp() public {
-    vm.createSelectFork(vm.rpcUrl('mainnet'), 20024431); // 5th of June
+    vm.createSelectFork(vm.rpcUrl('mainnet'), 20450323); // Aug-03-2024 08:11:47 PM +UTC
   }
 
   function test_getExchangeRate() public view {
@@ -52,6 +52,7 @@ contract ExchangeRatesEth is Test {
       .convertToAssets(10 ** 18);
     uint256 ethXRate = IEthX(CapAdaptersCodeEthereum.STADER_STAKE_POOLS_MANAGER).getExchangeRate();
     uint256 sUSDeRate = IERC4626(CapAdaptersCodeEthereum.sUSDe).convertToAssets(10 ** 18);
+    int256 ezEthRate = IChainlinkAggregator(CapAdaptersCodeEthereum.EzETH_PRICE_FEED).latestAnswer();
 
     console.log('cbEthRate', cbEthRate);
     console.log('rEthRate', rEthRate);
@@ -62,6 +63,7 @@ contract ExchangeRatesEth is Test {
     console.log('osEthRate', osEthRate);
     console.log('ethXRate', ethXRate);
     console.log('usUSDe', sUSDeRate);
+    console.log('ezEth', uint256(ezEthRate));
 
     console.log(block.timestamp);
   }
