@@ -33,8 +33,8 @@ library CapAdaptersCodeEthereum {
             pairDescription: 'Capped weETH / eETH(ETH) / USD',
             minimumSnapshotDelay: 7 days,
             priceCapParams: IPriceCapAdapter.PriceCapUpdateParams({
-              snapshotRatio: 1013885462848992200,
-              snapshotTimestamp: 1722715907, // 26-03-2024
+              snapshotRatio: 1034656878645040505,
+              snapshotTimestamp: 1711416299, // 26-03-2024
               maxYearlyRatioGrowthPercent: 8_75
             })
           })
@@ -133,8 +133,8 @@ library CapAdaptersCodeEthereum {
             pairDescription: 'ezETH / ETH / USD',
             minimumSnapshotDelay: 7 days,
             priceCapParams: IPriceCapAdapter.PriceCapUpdateParams({
-              snapshotRatio: 1017500000000000000,
-              snapshotTimestamp: 1721719835, // Aug-03-2024 08:11:47 PM +UTC
+              snapshotRatio: 1013885462848992200,
+              snapshotTimestamp: 1722715907, // Aug-03-2024 08:11:47 PM +UTC
               maxYearlyRatioGrowthPercent: 7_39
             })
           })

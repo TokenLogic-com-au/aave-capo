@@ -9,7 +9,7 @@ import {PriceCapAdapterBase, IPriceCapAdapter} from '../PriceCapAdapterBase.sol'
  * @title EzETHPriceCapAdapter
  * @author Tokenlogic
  * @notice Price capped adapter to calculate price of (ezETH / USD) pair by using
- * @notice Chainlink data feed for (ETH / USD) and (ezETH / stETH) ratio.
+ * @notice Chainlink data feed for (ETH / USD) and (ezETH / ETH) ratio.
  */
 contract EzETHPriceCapAdapter is PriceCapAdapterBase {
   /**
