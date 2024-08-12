@@ -133,8 +133,8 @@ library CapAdaptersCodeEthereum {
             pairDescription: 'ezETH / ETH / USD',
             minimumSnapshotDelay: 7 days,
             priceCapParams: IPriceCapAdapter.PriceCapUpdateParams({
-              snapshotRatio: 1013885462848992200,
-              snapshotTimestamp: 1722715907, // Aug-03-2024 08:11:47 PM +UTC
+              snapshotRatio: 1014257253297132000,
+              snapshotTimestamp: 1722502463, // Aug-01-2024 08:54:23 AM +UTC
               maxYearlyRatioGrowthPercent: 7_39
             })
           })

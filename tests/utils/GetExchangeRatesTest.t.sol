@@ -36,7 +36,7 @@ import {CapAdaptersCodeScroll} from '../../scripts/DeployScroll.s.sol';
 
 contract ExchangeRatesEth is Test {
   function setUp() public {
-    vm.createSelectFork(vm.rpcUrl('mainnet'), 20450323); // Aug-03-2024 08:11:47 PM +UTC
+    vm.createSelectFork(vm.rpcUrl('mainnet'), 20432634); // Aug-01-2024 08:54:23 AM +UTC
   }
 
   function test_getExchangeRate() public view {

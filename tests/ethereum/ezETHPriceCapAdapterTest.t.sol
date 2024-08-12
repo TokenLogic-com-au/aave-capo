@@ -12,7 +12,7 @@ contract ezETHPriceCapAdapterTest is BaseTest {
   constructor()
     BaseTest(
       CapAdaptersCodeEthereum.ezETHAdapterCode(),
-      30,
+      7,
       ForkParams({network: 'mainnet', blockNumber: 20512711}),
       'ezETH_Ethereum'
     )
@@ -22,5 +22,13 @@ contract ezETHPriceCapAdapterTest is BaseTest {
     IPriceCapAdapter.CapAdapterParams memory capAdapterParams
   ) internal override returns (IPriceCapAdapter) {
     return new EzETHPriceCapAdapter(capAdapterParams);
+  }
+  
+  function test_cappedLatestAnswer() public override {
+    // deploy adapter
+    IPriceCapAdapter adapter = IPriceCapAdapter(GovV3Helpers.deployDeterministic(deploymentCode));
+
+    // check is capped
+    assertFalse(adapter.isCapped());
   }
 }
