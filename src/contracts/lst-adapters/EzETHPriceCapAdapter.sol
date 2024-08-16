@@ -2,8 +2,8 @@
 pragma solidity ^0.8.19;
 
 import {IACLManager} from 'aave-address-book/AaveV3.sol';
-import {IChainlinkAggregator} from 'cl-synchronicity-price-adapter/interfaces/IChainlinkAggregator.sol';
 import {PriceCapAdapterBase, IPriceCapAdapter} from '../PriceCapAdapterBase.sol';
+import {IRateProvider} from "../../interfaces/IRateProvider.sol";
 
 /**
  * @title EzETHPriceCapAdapter
@@ -33,6 +33,6 @@ contract EzETHPriceCapAdapter is PriceCapAdapterBase {
 
   /// @inheritdoc IPriceCapAdapter
   function getRatio() public view override returns (int256) {
-    return IChainlinkAggregator(RATIO_PROVIDER).latestAnswer();
+    return int256(IRateProvider(RATIO_PROVIDER).getRate());
   }
 }
