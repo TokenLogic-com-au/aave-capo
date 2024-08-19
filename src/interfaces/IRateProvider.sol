@@ -15,5 +15,5 @@
 pragma solidity 0.8.19;
 
 interface IRateProvider {
-    function getRate() external view returns (uint256);
+  function getRate() external view returns (uint256);
 }

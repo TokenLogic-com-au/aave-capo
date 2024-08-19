@@ -19,7 +19,7 @@ library CapAdaptersCodeEthereum {
   address public constant USDe_PRICE_FEED = 0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961;
   address public constant STADER_STAKE_POOLS_MANAGER = 0xcf5EA1b38380f6aF39068375516Daf40Ed70D299;
   address public constant sUSDe = 0x9D39A5DE30e57443BfF2A8307A4256c8797A3497;
-  address public constant BALANCER_RATE_PROVIDER=0x387dBc0fB00b26fb085aa658527D5BE98302c84C;
+  address public constant BALANCER_RATE_PROVIDER = 0x387dBc0fB00b26fb085aa658527D5BE98302c84C;
 
   function weETHAdapterCode() internal pure returns (bytes memory) {
     return
@@ -120,7 +120,6 @@ library CapAdaptersCodeEthereum {
       );
   }
 
-    
   function ezETHAdapterCode() internal pure returns (bytes memory) {
     return
       abi.encodePacked(

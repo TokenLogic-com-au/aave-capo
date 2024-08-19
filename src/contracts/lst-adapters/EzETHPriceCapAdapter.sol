@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import {IACLManager} from 'aave-address-book/AaveV3.sol';
 import {PriceCapAdapterBase, IPriceCapAdapter} from '../PriceCapAdapterBase.sol';
-import {IRateProvider} from "../../interfaces/IRateProvider.sol";
+import {IRateProvider} from '../../interfaces/IRateProvider.sol';
 
 /**
  * @title EzETHPriceCapAdapter
