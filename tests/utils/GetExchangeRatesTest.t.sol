@@ -29,6 +29,7 @@ import {IWeEth} from '../../src/interfaces/IWeEth.sol';
 import {IOsTokenVaultController} from '../../src/interfaces/IOsTokenVaultController.sol';
 import {IEthX} from '../../src/interfaces/IEthX.sol';
 import {IRateProvider} from '../../src/interfaces/IRateProvider.sol';
+import {ILRTOracle} from '../../src/interfaces/ILRTOracle.sol';
 
 import {CapAdaptersCodeEthereum} from '../../scripts/DeployEthereum.s.sol';
 import {CapAdaptersCodeArbitrum} from '../../scripts/DeployArbitrumWeEth.s.sol';
@@ -54,6 +55,7 @@ contract ExchangeRatesEth is Test {
     uint256 ethXRate = IEthX(CapAdaptersCodeEthereum.STADER_STAKE_POOLS_MANAGER).getExchangeRate();
     uint256 sUSDeRate = IERC4626(CapAdaptersCodeEthereum.sUSDe).convertToAssets(10 ** 18);
     uint256 ezEthRate = IRateProvider(CapAdaptersCodeEthereum.BALANCER_RATE_PROVIDER).getRate();
+    uint256 rsEthRate = ILRTOracle(CapAdaptersCodeEthereum.LRT_ORACLE).rsETHPrice();
 
     console.log('cbEthRate', cbEthRate);
     console.log('rEthRate', rEthRate);
@@ -65,6 +67,7 @@ contract ExchangeRatesEth is Test {
     console.log('ethXRate', ethXRate);
     console.log('usUSDe', sUSDeRate);
     console.log('ezEth', ezEthRate);
+    console.log('rsETH', rsEthRate);
 
     console.log(block.timestamp);
   }
