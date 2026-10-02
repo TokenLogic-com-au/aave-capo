@@ -232,8 +232,8 @@ library CapAdaptersCodeMonad {
           IPendlePriceCapAdapter.PendlePriceCapAdapterParams({
             assetToUsdAggregator: AaveV3MonadAssets.AUSD_ORACLE,
             pendlePrincipalToken: PT_AUSD_17_DEC_2026,
-            maxDiscountRatePerYear: uint256(8.829e16).toUint64(),
-            discountRatePerYear: uint256(6.661e16).toUint64(),
+            maxDiscountRatePerYear: uint256(8.804e16).toUint64(),
+            discountRatePerYear: uint256(5.745e16).toUint64(),
             aclManager: address(AaveV3Monad.ACL_MANAGER),
             description: 'PT Capped AUSD AUSD/USD linear discount 17DEC2026'
           })
