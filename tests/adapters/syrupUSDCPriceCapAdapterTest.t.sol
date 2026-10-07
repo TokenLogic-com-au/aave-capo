@@ -46,13 +46,13 @@ contract syrupUSDCBaseTest is CLAdapterBaseTest {
 }
 
 /// forge-config: default.networks.network = "monad"
-/// forge-config: default.hardfork = "monad:MonadTen"
+/// forge-config: default.fork_state_by_number = true
 contract syrupUSDCMonadTest is CLAdapterBaseTest {
   constructor()
     CLAdapterBaseTest(
       CapAdaptersCodeMonad.syrupUSDCAdapterCode(),
       0,
-      ForkParams({network: 'monad', blockNumber: 109600000}),
+      ForkParams({network: 'monad', blockNumber: 83587465}),
       'syrupUSDC_monad'
     )
   {}
