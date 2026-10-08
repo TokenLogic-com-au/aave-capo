@@ -145,8 +145,8 @@ library CapAdaptersCodeXLayer {
           IPendlePriceCapAdapter.PendlePriceCapAdapterParams({
             assetToUsdAggregator: AaveV3XLayerAssets.USDG_ORACLE,
             pendlePrincipalToken: PT_USDG_25_FEB_2027,
-            maxDiscountRatePerYear: uint256(11.08e16).toUint64(),
-            discountRatePerYear: uint256(3.106e16).toUint64(),
+            maxDiscountRatePerYear: uint256(7.91e16).toUint64(),
+            discountRatePerYear: uint256(2.953e16).toUint64(),
             aclManager: address(AaveV3XLayer.ACL_MANAGER),
             description: 'PT Capped USDG USDG/USD linear discount 25FEB2027'
           })
