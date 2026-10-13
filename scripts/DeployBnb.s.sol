@@ -85,7 +85,7 @@ library CapAdaptersCodeBNB {
       );
   }
 
-  function USDTAdapterCode() internal pure returns (bytes memory) {
+  function USDTSvrAdapterCode() internal pure returns (bytes memory) {
     return
       abi.encodePacked(
         type(PriceCapAdapterStable).creationCode,
@@ -104,7 +104,7 @@ library CapAdaptersCodeBNB {
       );
   }
 
-  function USDCAdapterCode() internal pure returns (bytes memory) {
+  function USDCSvrAdapterCode() internal pure returns (bytes memory) {
     return
       abi.encodePacked(
         type(PriceCapAdapterStable).creationCode,
@@ -123,7 +123,7 @@ library CapAdaptersCodeBNB {
       );
   }
 
-  function FDUSDAdapterCode() internal pure returns (bytes memory) {
+  function FDUSDSvrAdapterCode() internal pure returns (bytes memory) {
     return
       abi.encodePacked(
         type(PriceCapAdapterStable).creationCode,
@@ -217,20 +217,20 @@ contract DeployWstEthSvrBnb is BNBScript {
   }
 }
 
-contract DeployUSDTBnb is BNBScript {
+contract DeployUSDTSvrBnb is BNBScript {
   function run() external broadcast {
-    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.USDTAdapterCode());
+    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.USDTSvrAdapterCode());
   }
 }
 
-contract DeployUSDCBnb is BNBScript {
+contract DeployUSDCSvrBnb is BNBScript {
   function run() external broadcast {
-    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.USDCAdapterCode());
+    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.USDCSvrAdapterCode());
   }
 }
 
-contract DeployFDUSDBnb is BNBScript {
+contract DeployFDUSDSvrBnb is BNBScript {
   function run() external broadcast {
-    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.FDUSDAdapterCode());
+    GovV3Helpers.deployDeterministic(CapAdaptersCodeBNB.FDUSDSvrAdapterCode());
   }
 }
